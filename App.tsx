@@ -6,6 +6,8 @@ import { Category } from './types';
 
 // --- Components ---
 
+// Removed the CSS generated Logo component in favor of the image file
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -21,11 +23,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center gap-2">
-              <img src="logo.jpg" alt="CiNian Culture" className="h-10 w-auto object-contain" />
-              <div className="flex flex-col ml-2">
-                <span className="font-bold text-xl text-cinian-dark tracking-tight">CiNian Culture</span>
-                <span className="text-xs text-gray-500 uppercase tracking-wider">Documentary Studio</span>
+            <Link to="/" className="flex-shrink-0 flex items-center gap-3">
+              <img src="logo.png" alt="CiNian" className="h-10 w-10 object-contain rounded-full" />
+              <div className="flex flex-col">
+                <span className="font-bold text-xl text-cinian-dark tracking-tight leading-none">CiNian Culture</span>
+                <span className="text-[10px] text-gray-500 uppercase tracking-widest mt-0.5">Documentary Studio</span>
               </div>
             </Link>
           </div>
@@ -87,9 +89,9 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="col-span-1 md:col-span-2">
-          <div className="flex items-center gap-2 mb-4">
-            <div className="bg-white p-1 rounded">
-               <img src="logo.jpg" alt="CiNian" className="h-6 w-auto" />
+          <div className="flex items-center gap-3 mb-4">
+            <div className="bg-white p-0.5 rounded-full shadow-sm overflow-hidden">
+               <img src="logo.png" alt="CiNian" className="h-8 w-8 object-contain" />
             </div>
             <span className="font-bold text-xl">CiNian Culture</span>
           </div>
